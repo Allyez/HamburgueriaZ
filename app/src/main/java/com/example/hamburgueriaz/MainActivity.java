@@ -153,15 +153,15 @@ public class MainActivity extends AppCompatActivity {
         double precoFinal = calcularPreco(temBacon,temCheddar,temMaionese,temKetchup,temTomate,temOvo,temCebola);
 
         String resumo = "Nome do cliente: " + nomeCliente + "\n" +
-                "tem Bacon?" + (temBacon ? "sim" : "Nao") + "\n" +
-                "tem Cheddar?" + (temCheddar ? "sim" : "Nao") + "\n" +
-                "tem Ovo?" + (temOvo ? "sim" : "Nao") + "\n" +
-                "tem Anéis de cebola?" + (temCebola ? "sim" : "Nao") + "\n" +
-                "tem Tomate?" + (temTomate ? "sim" : "Nao") + "\n" +
-                "tem Maionese?" + (temMaionese ? "sim" : "Nao") + "\n" +
-                "tem Ketchup?" + (temKetchup ? "sim" : "Nao") + "\n" +
-                "Quantidade: " + quantidade + "\n" +
-                "Preço final: R$ " + String.format("%.2f", precoFinal);
+                "tem Bacon? " + (temBacon ? "sim" : "Nao") + "\n" +
+                "tem Cheddar? " + (temCheddar ? "sim" : "Nao") + "\n" +
+                "tem Ovo? " + (temOvo ? "sim" : "Nao") + "\n" +
+                "tem Anéis de cebola? " + (temCebola ? "sim" : "Nao") + "\n" +
+                "tem Tomate? " + (temTomate ? "sim" : "Nao") + "\n" +
+                "tem Maionese? " + (temMaionese ? "sim" : "Nao") + "\n" +
+                "tem Ketchup? " + (temKetchup ? "sim" : "Nao") + "\n" +
+                "Quantidade : " + quantidade + "\n" +
+                "Preço final : R$ " + String.format("%.2f", precoFinal);
 
         resumoPedidoText.setText(resumo);
         precofinalText.setText("Preço final: R$ " + String.format("%.2f", precoFinal));
@@ -172,8 +172,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_SUBJECT, "Pedido de " + nomeCliente);
         intent.putExtra(Intent.EXTRA_TEXT, resumo);
 
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
+        startActivity(intent);
     }
 }
