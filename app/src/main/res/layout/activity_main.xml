@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,10 +14,10 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="172dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/hamburgueriaz"/>
+            android:contentDescription="hamburgueria"
+            android:src="@drawable/hamburgueriaz" />
 
         <TextView
             android:layout_width="match_parent"
@@ -28,82 +28,81 @@
             android:text="HAMBURGUERIA Z"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="30dp"/>
+            android:textSize="30sp" />
 
         <TextView
             style="@style/mytextview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="20dp"
+            android:focusable="auto"
             android:text="Faça seu pedido"
-            android:clickable="true"/>
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/nomecliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:height="48dp"
-            android:hint="Digite seu nome..."/>
+            android:autofillHints="name"
+            android:hint="Digite seu nome..."
+            android:inputType="text" />
 
         <CheckBox
             android:id="@+id/bacon"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bacon"
-            />
+            android:textStyle="bold"
+            android:text="Bacon     3,00" />
 
         <CheckBox
             android:id="@+id/cheddar"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cheddar"
-            />
+            android:textStyle="bold"
+            android:text="Cheddar     3,00" />
 
         <CheckBox
             android:id="@+id/cebola"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Anéis de cebola"
-            />
+            android:textStyle="bold"
+            android:text="Anéis de cebola     2,00" />
 
         <CheckBox
             android:id="@+id/ovo"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ovo Frito"
-            />
+            android:textStyle="bold"
+            android:text="Ovo Frito     2,00" />
 
 
         <CheckBox
             android:id="@+id/maionese"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Maionese"
-            />
+            android:textStyle="bold"
+            android:text="Maionese     1,00" />
 
         <CheckBox
             android:id="@+id/ketchup"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ketchup"
-            />
+            android:textStyle="bold"
+            android:text="ketchup     1,00" />
 
         <CheckBox
             android:id="@+id/tomate"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tomate"
-            />
-
+            android:textStyle="bold"
+            android:text="tomate     1,00" />
 
         <TextView
             style="@style/mytextview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:text="Quantidade"/>
+            android:text="Quantidade"
+            android:textAlignment="center" />
 
 
         <FrameLayout
@@ -116,72 +115,73 @@
                 android:layout_width="52dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginRight="130px"
+                android:layout_marginEnd="50dp"
                 android:backgroundTint="#FF0000"
+                android:padding="10dp"
                 android:text="-"
-                android:textSize="20dp"
-                android:padding="10dp"/>
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/quantpedido"
                 style="@style/mytextview"
-                android:layout_gravity="center"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:textAlignment="center"
-                android:text="0"/>
+                android:layout_gravity="center"
+                android:text="0"
+                android:textAlignment="center" />
 
             <Button
                 android:id="@+id/adicionar"
                 android:layout_width="52dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="130px"
+                android:layout_marginStart="50dp"
                 android:backgroundTint="#FF4500"
-                android:text="+"
-                android:textSize="20dp"
                 android:padding="10dp"
-                android:clickable="true"/>
+                android:text="+"
+                android:textSize="25sp" />
 
         </FrameLayout>
 
         <TextView
             style="@style/mytextview"
-            android:layout_marginTop="70px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Resumo do pedido"/>
+            android:layout_marginTop="30dp"
+            android:text="Preço total" />
 
         <TextView
             android:id="@+id/precofinal"
             style="@style/mytextview"
             android:layout_width="105dp"
             android:layout_height="match_parent"
-            android:text="R$ 0,00"/>
+            android:text="R$ 0,00" />
 
         <Button
             android:id="@+id/fazerPedido"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_margin="100px"
             android:layout_gravity="center"
+            android:layout_margin="40dp"
+            android:padding="15dp"
             android:backgroundTint="#FF4500"
             android:text="Fazer pedido"
-            android:textSize="18dp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/resumo"
             style="@style/mytextview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Resumo do Pedido"/>
+            android:text="Resumo do Pedido" />
 
         <TextView
             style="@style/mytextview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="125px"
-            android:text="Desenvolvido por Yuri"/>
+            android:layout_marginTop="125dp"
+            android:alpha="0.4"
+            android:text="Desenvolvido por Yuri" />
 
 
     </LinearLayout>
